@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+	api: {
+		bodyParser: {
+			sizeLimit: "10mb",
+		},
+	},
+	experimental: {
+		serverActions: true,
+		serverActionsBodySizeLimit: "10mb",
+	},
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
